@@ -13,4 +13,5 @@ dependencies = [
     "langchain-openai>=1.5.1",
     "pydantic>=2.13.4",
     "python-dotenv>=1.2.2",
+    "typing-extensions>=4.16.0",
 ]
