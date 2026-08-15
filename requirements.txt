@@ -7,3 +7,4 @@ langchain-google-genai
 ipykernel
 pydantic
 typing-extensions
+langchain-tavily
