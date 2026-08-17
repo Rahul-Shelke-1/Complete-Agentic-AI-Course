@@ -14,7 +14,7 @@ Above diagram represent the overall conceptual designing goes behing the MCP arc
 
 - Created MCP Client & communicated 2 MCP Servers
 
-    - To `math server` with `stdio` protocol.
-    - To `weather server` with `http` protocol.
+    - To `math server` with `stdio` protocol. (communicating with `terminal / command prompt`)
+    - To `weather server` with `http` protocol. (communicating with `url`)
 
 ![mcp-protocol](./flowcharts/3-mcp-protocol.svg)
