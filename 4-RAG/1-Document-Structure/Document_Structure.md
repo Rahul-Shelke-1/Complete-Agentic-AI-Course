@@ -1,51 +1,55 @@
 # Document Structure
 
 ![document-structuring](../flowcharts/4-document-structuring.svg)
-
 *[figure 4.1]*
 
-When ever we work with any external knowledge database or data that needs to be feeded into the vector DB we definitely need to know about this document structure.
+Whenever we work with an external knowledge base or data that needs to be fed into a vector DB, we definitely need to understand this document structure.
 
-We might ask our self **"Why ?"**
+We might ask ourselves: **"Why?"**
 
 ## RAG Pipeline
 
 ![rag-pipeline](../flowcharts/3-rag-pipeline.svg)
-
 *[figure 4.2]*
 
-Because in this data ingestion pipeline [figure 4.2] the first step is data ingestion. when ever we talk about data ingestion there we can have any kind of files like PDF file, HTML files, DB file, Excel file. Our main aim is to read all this particular file content and probably convert it into a structure where in we can additionally do like apply strategies like chunking, embedding and storing into vector DB, that is what this entier pipeline is all about.
+Because in this data ingestion pipeline [figure 4.2], the first step is data ingestion. Whenever we talk about data ingestion, we can have various kinds of source files like PDF files, HTML files, database files, and Excel files. Our main aim is to read all these file contents and convert them into a structure where we can additionally apply strategies like chunking, embedding, and storing into a vector DB-which is what this entire pipeline is all about.
 
-so for that we really need to understand this "Document Structuring".
+So for that, we really need to understand "Document Structuring".
 
-refer the figure 4.2, initially we data ingesion pipeline, In that pipeline first step is data injection, that means basically we may have different kinds of files like pdf, html, excel and database files, unstrcutred file or any other kind of files.
+Referring to figure 4.2, in the data ingestion pipeline, the first step is data ingestion. This means we may have different kinds of files such as PDFs, HTML, Excel, database files, unstructured files, or any other format.
 
-So in data ingetion our main strategy is that *how to proceed with reading this particular file ?*, *how to perform data parsing ?*, and then *how to convert this into document structure ?* this are the reasons we have to understand "Dcument Structuring" and 
+So in data ingestion, our main strategy revolves around: 
+- *how do we proceed with reading this particular file?* 
+- *how do we perform data parsing?* 
+and then 
+- *how do we convert this into a document structure?* 
 
-- how to build thsi "Document Structure" ?
-- What is metadata ?
-- How the structure of metadata exists ?
+These are the key reasons why we must understand "Document Structuring", along with:
 
-**Data Parsing** :this step is really important, in the retrival pipeline i.e., quiery retrival pipeline based on this parsing it can become much more efficient, we will be able to get much more accurate in results.
+* How to build this "Document Structure"?
+* What is metadata?
+* What does the structure of metadata look like?
 
-After data pasring we need to do **chunking**
+**Data Parsing**: This step is really important. In the retrieval pipeline (i.e., query retrieval pipeline), proper parsing makes retrieval much more efficient and leads to much more accurate results.
 
-In chunking we convert entier documents into chunks, multiple chunks, this strategy is all about breaking big documents into small parts or smaller chunks.
+After data parsing, we need to perform **chunking**.
 
-Again we might ask our self **Why?** (chunk big documents into small parts).
+In chunking, we convert the entire document into multiple smaller chunks. This strategy is all about breaking big documents into smaller parts or chunks.
 
-the reason we do this because when ever we consider with respect to any LLM model or any embedding models we need to embed the document, with respect to every LLM model , there is fixed context size.
+Again, we might ask ourselves: **Why?** (Why break big documents into smaller parts?).
 
-for example,
+The reason we do this is that whenever we work with any LLM model or embedding model, we need to embed the document, and every model has a fixed context size.
 
-if we take all 100 page document/pdf completely give it to the llm model for performing the embeddings and embedding basically means we convert text into embedding vectors. it will not be possible.it will say "hey you are proving data more that my context size" and that will not be possible to conbvert the text into embedding vectors.
+For example:
 
-so with in the limits of the context size we need to give the data, and this is for both embedding model and even in later stages whenevr we use any kind of LLM model , because for every LLM model there is a fixed context size.
+If we take an entire 100-page PDF document and pass it directly to an embedding model to convert the text into vector embeddings, it will not be possible. The model will return an error stating that the input exceeds its context size limit.
 
-different LLM may have different-different context size.
+Therefore, we must feed the data strictly within the model's context size limits. This applies to both embedding models and the LLM models used in later stages, as every model operates with a specific context window.
 
-so this is a good stratgy that we try to divide our data into chunks so that we fit them in a way that in later stages we'll be able to put them into the vector databases.
+Different LLM models may have different context window sizes.
 
-Afte embedding we store data into vector database, inside the vector db , the chunks will be stored in the form of vectors.
+So dividing our data into smaller chunks is a solid strategy to ensure the processed data fits properly before storing it into vector databases.
 
-after this from the vector db we will be able to apply the any kind of similarity search, to retrive the similar data chunks.
+After embedding, we store the data in the vector database, where the chunks are stored as vectors.
+
+Finally, from the vector DB, we can apply similarity search techniques to retrieve the most relevant data chunks.
