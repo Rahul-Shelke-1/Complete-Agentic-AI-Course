@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ignore 
+4-RAG/1-Document-Structure/data/pdf/designing-machine-learning-systems.pdf
