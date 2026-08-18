@@ -10,3 +10,5 @@ typing-extensions
 langchain-tavily
 langchain-mcp-adapters
 mcp
+pypdf
+pymupdf
