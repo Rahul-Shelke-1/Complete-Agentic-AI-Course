@@ -6,7 +6,7 @@
 
 #### 1. How a Shallow Agent Works
 
-![shallow-agent](./flowcharts/agnet.svg)
+![shallow-agent](./flowcharts/agent.svg)
 
 * **Core Mechanism:** A shallow agent receives an input query, passes it to the LLM, and applies a single decision layer: *Do I have enough knowledge to answer directly, or do I need to query an external tool?*
 * **Tool Integration:** Tools can range from web search APIs, python code interpreters, SQL database connectors, or custom external APIs.
