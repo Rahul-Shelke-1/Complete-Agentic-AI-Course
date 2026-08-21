@@ -17,3 +17,4 @@ faiss-cpu
 chromadb
 deepagents
 tavily-python
+langsmith
