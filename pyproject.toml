@@ -17,6 +17,7 @@ dependencies = [
     "langchain-openai>=1.5.1",
     "langchain-tavily>=0.2.18",
     "langsmith>=0.11.0",
+    "litellm>=1.97.0",
     "mcp>=1.29.0",
     "pydantic>=2.13.4",
     "pymupdf>=1.28.2",
